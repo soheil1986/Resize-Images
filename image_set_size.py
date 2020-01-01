@@ -9,7 +9,7 @@ from PIL import Image
 #import cv2
 import glob
 count=0
-for filename in glob.glob('C:/Afrozan/script_python/SS 2016/*.jpg'):
+for filename in glob.glob('../*.jpg'):
     print(count)
     im = Image.open(filename)
     #im = cv2.imread('C:/Afrozan/script_python/SS 2016/*.jpg',1)
@@ -44,6 +44,6 @@ for filename in glob.glob('C:/Afrozan/script_python/SS 2016/*.jpg'):
     newsize = (1000, 1600) 
     im1 = cropped.resize(newsize)
     #im1=cv2.resize(cropped, newsize)
-    im1 = im1.save('C:/Afrozan/script_python/SS 2016/1000_1600/'+str(count)+'.jpg') 
+    im1 = im1.save('..'+str(count)+'.jpg') 
     #cv2.imwrite('C:/Afrozan/script_python/SS 2016/1000_1600/'+str(count)+'.jpg', im1) 
     count=count+1
